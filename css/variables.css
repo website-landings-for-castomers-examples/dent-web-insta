@@ -23,6 +23,10 @@
     --radius-sm: 14px;
     --radius-round: 50%;
     
+    /* --radius-main: 24px;
+    --radius-sm: 14px;
+    --radius-round: 50%; */
+
     /* Стеклянные элементы iOS 26 (Ультра чистый размытый бэкграунд) */
     --glass-blur: blur(20px) saturate(195%);
     --glass-border: rgba(255, 255, 255, 0.65);
