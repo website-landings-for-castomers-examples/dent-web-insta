@@ -92,17 +92,6 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-.img-placeholder::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.7) 50%, transparent 55%);
-    animation: placeholder-shine 3.5s infinite linear;
-}
-
 @keyframes placeholder-shine {
     0% { transform: translate(-30%, -30%) rotate(0deg); }
     100% { transform: translate(30%, 30%) rotate(0deg); }
