@@ -1,75 +1,73 @@
-/* services.css */
+/* Полностью замени содержимое css/services.css на этот код */
 .services-section {
-    padding: 45px 0;
+    padding: 35px 0;
     overflow: hidden;
 }
 
-/* Область просмотра карусели */
+/* Контрастная подложка для трека карусели */
 .carousel-viewport {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 15px 0;
+    padding: 25px 0;
+    background-color: var(--bg-carousel-track); /* Переменная контрастного фона */
+    border-top: 1px solid rgba(0, 168, 204, 0.05);
+    border-bottom: 1px solid rgba(0, 168, 204, 0.05);
 }
 
 .carousel-container {
     display: flex;
-    gap: 0; 
     width: 100%;
-    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Карточки изначально меньше и прозрачнее */
+/* Карточки стали компактнее по ширине (70%) и ближе друг к другу (2%) */
 .service-card {
-    flex: 0 0 76%; /* Видны края соседних карт */
-    margin: 0 3%;
+    flex: 0 0 70%; 
+    margin: 0 2%;
     background: var(--bg-card);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-main);
-    padding: 20px;
+    padding: 16px;
     box-shadow: var(--shadow-premium);
-    /* transition: var(--transition-smooth); */
-    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-    transform: scale(0.92);
-    opacity: 0.65;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: scale(0.9);
+    opacity: 0.55; /* Неактивные карты сильнее приглушены */
 }
 
-/* Центральная активная карточка */
 .service-card.active-slide {
     transform: scale(1.02);
     opacity: 1;
     box-shadow: var(--shadow-card-active);
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(0, 168, 204, 0.25);
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(0, 168, 204, 0.2);
 }
 
 .service-img {
     width: 100%;
-    height: 135px;
+    height: 110px; /* Сделали картинку чуть ниже */
     border-radius: var(--radius-sm);
-    margin-bottom: 14px;
-}
-
-.service-name {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--secondary);
-    margin-bottom: 10px;
-}
-
-/* Фиксация высоты текста с градиентным обрывом */
-.service-desc-wrapper {
-    position: relative;
-    max-height: 70px;
-    overflow: hidden;
-    transition: var(--transition-smooth);
     margin-bottom: 12px;
 }
 
-/* Раскрытый текст */
+.service-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.service-desc-wrapper {
+    position: relative;
+    max-height: 60px; /* Плотнее прижали текст */
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    margin-bottom: 10px;
+}
+
 .service-desc-wrapper.full-view {
     max-height: 350px;
 }
@@ -77,33 +75,30 @@
 .service-text {
     font-size: var(--font-small);
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
-/* Плавный градиент угасания текста снизу */
 .service-desc-wrapper::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 35px;
+    height: 25px;
     background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent);
     transition: var(--transition-smooth);
     pointer-events: none;
 }
 
-/* Убираем градиент при полном просмотре */
 .service-desc-wrapper.full-view::after {
     opacity: 0;
 }
 
-/* Блок управления кнопками */
 .service-controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .btn-read-more {
@@ -119,6 +114,6 @@
     display: none;
     width: 100%;
     text-align: center;
-    padding-top: 8px;
+    padding-top: 6px;
     border-top: 1px dashed rgba(0,0,0,0.06);
 }
