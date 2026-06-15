@@ -1,0 +1,80 @@
+/* before-after.css */
+.cases-section {
+    padding: 45px 0;
+    overflow: hidden;
+}
+
+.cases-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.case-card {
+    flex: 0 0 80%;
+    margin: 0 2.5%;
+    background: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-main);
+    padding: 18px;
+    box-shadow: var(--shadow-premium);
+    /* transition: var(--transition-smooth); */
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: scale(0.93);
+    opacity: 0.65;
+}
+
+.case-card.active-slide {
+    transform: scale(1.01);
+    opacity: 1;
+    box-shadow: var(--shadow-card-active);
+    background: #ffffff;
+}
+
+.case-procedure {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Вертикальный стек изображений 1:1 друг под другом */
+.case-images-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.image-box-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Жесткое соотношение сторон 1:1 */
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.case-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: var(--secondary);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.case-badge.after-badge {
+    background: rgba(0, 168, 204, 0.9);
+    color: #ffffff;
+}

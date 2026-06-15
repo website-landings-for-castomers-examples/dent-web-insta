@@ -1,0 +1,83 @@
+/* benefits.css */
+.benefits-section {
+    padding: 45px 0;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.benefit-card {
+    background: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-main);
+    padding: 22px;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.benefit-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.benefit-icon-box {
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-premium);
+    font-size: 20px;
+}
+
+.benefit-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+/* Скрытый текстовый блок, открывающийся по клику */
+.benefit-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    font-size: var(--font-small);
+    color: var(--text-muted);
+    padding-top: 0;
+    line-height: 1.6;
+}
+
+/* Класс состояния раскрытой карточки */
+.benefit-card.expanded {
+    box-shadow: var(--shadow-card-active);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 168, 204, 0.2);
+}
+
+.benefit-card.expanded .benefit-details {
+    max-height: 180px; /* Запас под контент */
+    opacity: 1;
+    padding-top: 14px;
+}
+
+.benefit-toggle-btn {
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
+    font-size: var(--font-small);
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 0;
+}

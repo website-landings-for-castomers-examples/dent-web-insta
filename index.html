@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Премиальная Стоматология</title>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/benefits.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/before-after.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <div class="logo-icon img-placeholder"></div>
+                <span>DENT•PREMIUM</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-premium btn-contact-sm">Написать</button>
+                <button class="burger-trigger" id="burgerTrigger" aria-label="Открыть меню">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path class="line-top" d="M3 6H21" stroke="#005670" stroke-width="2.5" stroke-linecap="round"/>
+                        <path class="line-mid" d="M3 12H21" stroke="#005670" stroke-width="2.5" stroke-linecap="round"/>
+                        <path class="line-bot" d="M3 18H21" stroke="#005670" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="nav-line-menu" id="navLineMenu">
+            <nav class="nav-links-list">
+                <a href="#benefits" class="nav-link-item">Преимущества</a>
+                <a href="#services" class="nav-link-item">Услуги</a>
+                <a href="#cases" class="nav-link-item">До/После</a>
+                <a href="#calc" class="nav-link-item" style="opacity: 0.5;">Калькулятор</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h1 class="hero-title">Кристальная чистота<br><span>Вашей улыбки</span></h1>
+            <p class="hero-subtitle">Медицинские технологии нового поколения. Почувствуйте премиальный комфорт и заботу.</p>
+            
+            <div class="hero-media img-placeholder">
+                [Фоновое изображение премиум клиники]
+            </div>
+            
+            <div class="hero-action-box">
+                <button class="btn-premium primary hero-btn">Записаться на прием</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Преимущества</h2>
+            <div class="benefits-list">
+                
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon-box">🦷</div>
+                        <h3 class="benefit-title">Лечение под микроскопом</h3>
+                    </div>
+                    <div class="benefit-details">
+                        Использование немецкой оптики экспертного класса позволяет врачу видеть структуру зуба при 40-кратном увеличении. Это обеспечивает идеальную точность обработки и гарантирует спасение даже самых безнадежных зубов.
+                    </div>
+                    <button class="benefit-toggle-btn">Подробнее</button>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon-box">✨</div>
+                        <h3 class="benefit-title">Абсолютный комфорт</h3>
+                    </div>
+                    <div class="benefit-details">
+                        Инновационная система компьютерной анестезии STA позволяет вводить препарат безболезненно и незаметно для пациента. Процедура контролируется микропроцессором, полностью исключая стресс и неприятные ощущения.
+                    </div>
+                    <button class="benefit-toggle-btn">Подробнее</button>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon-box">💎</div>
+                        <h3 class="benefit-title">Премиум материалы</h3>
+                    </div>
+                    <div class="benefit-details">
+                        Мы закупаем только оригинальные композитные составы и имплантационные системы швейцарского производства. Новые зубы неотличимы от природных ни по блеску, ни по прочности эмали.
+                    </div>
+                    <button class="benefit-toggle-btn">Подробнее</button>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon-box">🛡️</div>
+                        <h3 class="benefit-title">Гарантия безопасности</h3>
+                    </div>
+                    <div class="benefit-details">
+                        Трехступенчатая система стерилизации инструментов по международным протоколам защиты и врачи высшей категории гарантируют идеальный медицинский результат и полную инфекционную безопасность.
+                    </div>
+                    <button class="benefit-toggle-btn">Подробнее</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Услуги</h2>
+        </div>
+        <div class="carousel-viewport" id="servicesViewport">
+            <div class="carousel-container" id="servicesContainer">
+                
+                <div class="service-card">
+                    <div class="service-img img-placeholder">[Услуга: Эстетика]</div>
+                    <h3 class="service-name">Керамические виниры</h3>
+                    <div class="service-desc-wrapper">
+                        <p class="service-text">
+                            Создание безупречной формы и кристальной белизны зубов. Ультратонкие виниры E.max фиксируются на передней поверхности зубов. Процесс включает цифровое сканирование лица, 3D-моделирование будущей улыбки и высокоточную установку без агрессивной обточки. Срок службы конструкций составляет более 15 лет.
+                        </p>
+                    </div>
+                    <div class="service-controls">
+                        <button class="btn-read-more">Далее &rarr;</button>
+                        <button class="btn-collapse-service">Свернуть</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img img-placeholder">[Услуга: Имплантация]</div>
+                    <h3 class="service-name">Имплантация зубов</h3>
+                    <div class="service-desc-wrapper">
+                        <p class="service-text">
+                            Восстановление зубов за один визит. Мы применяем лучшие мировые имплантационные системы (Straumann, Nobel Biocare). Хирургические шаблоны, созданные на основе компьютерной томографии, обеспечивают установку импланта со стопроцентной точностью и приживаемостью 99.8%.
+                        </p>
+                    </div>
+                    <div class="service-controls">
+                        <button class="btn-read-more">Далее &rarr;</button>
+                        <button class="btn-collapse-service">Свернуть</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img img-placeholder">[Услуга: Отбеливание]</div>
+                    <h3 class="service-name">Отбеливание Zoom 4</h3>
+                    <div class="service-desc-wrapper">
+                        <p class="service-text">
+                            Осветление эмали до 8 оттенков всего за 45 минут. Самая щадящая технология Philips Zoom QuickPro использует лампу холодного света. Гель не перегревает ткани зуба, а входящий в его состав аморфный фосфат кальция восстанавливает и укрепляет эмаль непосредственно в процессе процедуры.
+                        </p>
+                    </div>
+                    <div class="service-controls">
+                        <button class="btn-read-more">Далее &rarr;</button>
+                        <button class="btn-collapse-service">Свернуть</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cases-section" id="cases">
+        <div class="container">
+            <h2 class="section-title">Результаты</h2>
+        </div>
+        <div class="carousel-viewport" id="casesViewport">
+            <div class="cases-container" id="casesContainer">
+                
+                <div class="case-card">
+                    <div class="case-procedure">Эстетическая реставрация</div>
+                    <div class="case-images-stack">
+                        <div class="image-box-wrapper img-placeholder">
+                            <span class="case-badge after-badge">ПОСЛЕ</span>
+                            [Фото работы ПОСЛЕ]
+                        </div>
+                        <div class="image-box-wrapper img-placeholder">
+                            <span class="case-badge">ДО</span>
+                            [Фото работы ДО]
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-procedure">Установка виниров (10 зубов)</div>
+                    <div class="case-images-stack">
+                        <div class="image-box-wrapper img-placeholder">
+                            <span class="case-badge after-badge">ПОСЛЕ</span>
+                            [Фото работы ПОСЛЕ]
+                        </div>
+                        <div class="image-box-wrapper img-placeholder">
+                            <span class="case-badge">ДО</span>
+                            [Фото работы ДО]
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-procedure">Комплексная имплантация</div>
+                    <div class="case-images-stack">
+                        <div class="image-box-wrapper img-placeholder">
+                            <span class="case-badge after-badge">ПОСЛЕ</span>
+                            [Фото работы ПОСЛЕ]
+                        </div>
+                        <div class="image-box-wrapper img-placeholder">
+                            <span class="case-badge">ДО</span>
+                            [Фото работы ДО]
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon img-placeholder"></div>
+                <span>DENT•PREMIUM</span>
+            </div>
+            <div class="footer-links">
+                <a href="#benefits" class="footer-link-item">Преимущества</a>
+                <a href="#services" class="footer-link-item">Услуги</a>
+                <a href="#cases" class="footer-link-item">Результаты</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Dent Premium. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+</html>

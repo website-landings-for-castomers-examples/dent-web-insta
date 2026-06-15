@@ -1,0 +1,134 @@
+/* header.css */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--bg-header);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    z-index: 1002;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--secondary);
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--primary), #ffffff);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--glow-effect);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-contact-sm {
+    padding: 8px 14px;
+    font-size: var(--font-small);
+    border-radius: var(--radius-sm);
+}
+
+.burger-trigger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--glass-border);
+}
+
+.burger-trigger svg path {
+    transition: var(--transition-smooth);
+    transform-origin: center;
+}
+
+.burger-trigger.active svg .line-top {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.burger-trigger.active svg .line-mid {
+    opacity: 0;
+}
+
+.burger-trigger.active svg .line-bot {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Плавно выезжающая линия-меню как продолжение хедера */
+.nav-line-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-premium);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+    z-index: 1001;
+    padding: 12px 0;
+}
+
+.nav-line-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav-links-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 22px;
+    padding: 4px 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-links-list::-webkit-scrollbar {
+    display: none; /* Полностью прячем скроллбар для чистоты дизайна */
+}
+
+.nav-link-item {
+    font-size: var(--font-body);
+    font-weight: 500;
+    color: var(--secondary);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-smooth);
+}
+
+.nav-link-item:active {
+    background: rgba(0, 168, 204, 0.08);
+    color: var(--primary);
+}

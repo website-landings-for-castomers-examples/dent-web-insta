@@ -1,0 +1,109 @@
+/* global.css - Базовые и общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding-top: 70px; /* Чтобы контент не заезжал под фиксированную шапку */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+/* Кнопки в стиле премиум */
+.btn-premium {
+    background: linear-gradient(135deg, #ffffff, #eaf8fa);
+    color: var(--secondary);
+    border: 1px solid var(--glass-border);
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--font-body);
+    box-shadow: var(--shadow-premium), inset 0 1px 2px rgba(255, 255, 255, 1);
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-premium.primary {
+    background: linear-gradient(135deg, var(--primary), #00c5eb);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 8px 22px var(--primary-glow);
+}
+
+.section-title {
+    font-size: var(--font-h2);
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: var(--primary);
+    margin: 8px auto 0;
+    border-radius: var(--radius-sm);
+}
+
+/* Красивые светящиеся заглушки картинок */
+.img-placeholder {
+    background: linear-gradient(135deg, #f0f8fc, #def2f7);
+    border: 1px dashed rgba(0, 168, 204, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: var(--font-small);
+    position: relative;
+    overflow: hidden;
+}
+
+.img-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.7) 50%, transparent 55%);
+    animation: placeholder-shine 3.5s infinite linear;
+}
+
+@keyframes placeholder-shine {
+    0% { transform: translate(-30%, -30%) rotate(0deg); }
+    100% { transform: translate(30%, 30%) rotate(0deg); }
+}

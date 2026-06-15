@@ -1,0 +1,124 @@
+/* services.css */
+.services-section {
+    padding: 45px 0;
+    overflow: hidden;
+}
+
+/* Область просмотра карусели */
+.carousel-viewport {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 0; 
+    width: 100%;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Карточки изначально меньше и прозрачнее */
+.service-card {
+    flex: 0 0 76%; /* Видны края соседних карт */
+    margin: 0 3%;
+    background: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-main);
+    padding: 20px;
+    box-shadow: var(--shadow-premium);
+    /* transition: var(--transition-smooth); */
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: scale(0.92);
+    opacity: 0.65;
+}
+
+/* Центральная активная карточка */
+.service-card.active-slide {
+    transform: scale(1.02);
+    opacity: 1;
+    box-shadow: var(--shadow-card-active);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 168, 204, 0.25);
+}
+
+.service-img {
+    width: 100%;
+    height: 135px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 14px;
+}
+
+.service-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+/* Фиксация высоты текста с градиентным обрывом */
+.service-desc-wrapper {
+    position: relative;
+    max-height: 70px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    margin-bottom: 12px;
+}
+
+/* Раскрытый текст */
+.service-desc-wrapper.full-view {
+    max-height: 350px;
+}
+
+.service-text {
+    font-size: var(--font-small);
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Плавный градиент угасания текста снизу */
+.service-desc-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent);
+    transition: var(--transition-smooth);
+    pointer-events: none;
+}
+
+/* Убираем градиент при полном просмотре */
+.service-desc-wrapper.full-view::after {
+    opacity: 0;
+}
+
+/* Блок управления кнопками */
+.service-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.btn-read-more {
+    font-size: var(--font-small);
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.btn-collapse-service {
+    font-size: var(--font-small);
+    font-weight: 600;
+    color: var(--text-muted);
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(0,0,0,0.06);
+}
