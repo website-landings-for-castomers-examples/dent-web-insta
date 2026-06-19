@@ -67,13 +67,22 @@
     gap: 8px; /* Сблизили фотки «До» и «После» */
 }
 
-/* Убрали aspect-ratio 1/1, сделали фиксированную аккуратную высоту */
 .image-box-wrapper {
     position: relative;
     width: 100%;
-    height: 105px; /* Карточка стала намного короче и изящнее */
+    height: 125px; /* Высота специально под фотографии 398x240 */
+    object-fit: cover; /* Спасает фото от искажений при сужении экрана */
+    object-position: center;
     border-radius: var(--radius-sm);
     overflow: hidden;
+}
+
+/* На всякий случай добавим правило для самих тегов картинок внутри окон, 
+   чтобы они точно слушались родительских размеров */
+.image-box-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .case-badge {

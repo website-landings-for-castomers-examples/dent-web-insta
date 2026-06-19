@@ -19,6 +19,7 @@
 .carousel-container {
     display: flex;
     width: 100%;
+    align-items: flex-start;
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -50,7 +51,9 @@
 
 .service-img {
     width: 100%;
-    height: 110px; /* Сделали картинку чуть ниже */
+    height: 140px; /* Идеальная высота под твои пропорции 398x260 */
+    object-fit: cover; /* Удерживает картинку от растягивания и центрирует её */
+    object-position: center; /* Фокусирует внимание на центре фотографии */
     border-radius: var(--radius-sm);
     margin-bottom: 12px;
 }

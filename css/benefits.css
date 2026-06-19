@@ -39,6 +39,13 @@
     font-size: 20px;
 }
 
+.benefits-icon {
+    width: 30px;
+    aspect-ratio: 1;
+    
+    filter: invert(24%) sepia(45%) saturate(1637%) hue-rotate(155deg) brightness(91%) contrast(102%);
+}
+
 .benefit-title {
     font-size: 16px;
     font-weight: 600;

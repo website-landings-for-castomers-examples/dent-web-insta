@@ -33,11 +33,24 @@
 
 .hero-media {
     width: 100%;
-    height: 220px;
-    border-radius: var(--radius-main);
-    margin-bottom: 35px;
-    box-shadow: var(--shadow-premium), var(--glow-effect);
-    border: 2px solid #ffffff;
+    /* Ограничим максимальную высоту на мобилке, чтобы оставалось место для кнопки */
+    max-height: 250px; 
+    border-radius: var(--radius-sm); /* Округляем углы, если нужно по дизайну */
+    overflow: hidden;
+    
+    /* Оставляем автоматические отступы, чтобы блок центрировался во flex-контейнере */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    /* Магия: картинка заполняет блок без искажения пропорций, лишнее аккуратно подрезается */
+    object-fit: cover; 
+    /* Центрируем фокус фотографии */
+    object-position: center; 
+    display: block;
 }
 
 .hero-action-box {
