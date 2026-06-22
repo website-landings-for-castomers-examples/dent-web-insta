@@ -22,22 +22,9 @@
     z-index: 1002;
 }
 
-/* .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--secondary);
-}
-
 .logo-icon {
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, var(--primary), #ffffff);
-    border-radius: var(--radius-sm);
-    box-shadow: var(--glow-effect);
-} */
+    height: 45px;
+}
 
 .header-actions {
     display: flex;
