@@ -96,7 +96,7 @@
     flex-direction: row;
     overflow-x: auto;
     white-space: nowrap;
-    gap: 22px;
+    gap: 12px;
     padding: 4px 20px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;

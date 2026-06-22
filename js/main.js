@@ -22,9 +22,6 @@ function initHeaderBurger() {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
-            
-            // Пропускаем заглушку калькулятора
-            if(targetId === '#calc') return;
 
             const targetSection = document.querySelector(targetId);
             
